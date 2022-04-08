@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!--   
+  <label> enter a array value</label><input type="number"  id="arr"  -->
+
+  <body>
+    <label>array</label>
+    <h1 id="h2">hi</h1>
+    <h1 id="h1">hi</h1>
+  </body>
+  <input type="number" id="number" />
+
+  <button onclick="add()">add</button>
+  <input type="number" id="position" />
+  <button onclick="postion()">postion</button>
+
+  <input type="text" id="nu" onchange="change()" />
+
+  <button onclick="change()">click</button>
+  <h1></h1>
+
+  <script>
+    var a = [];
+
+    const postion = () => {
+      let val = document.getElementById("position").value;
+
+      if (val > 0) {
+        for (let i = val; i < a.length; i++) {
+          for (let j = val; j < a.length; j++) {
+            // if (!profit) {
+            //   if (val < a[i]) {
+            //     profit = a[j] - a[i];
+            //   }
+            // }
+            // else{
+            // }
+          }
+        }
+      }
+    };
+
+    // document.getElementById("h1").innerHTML = `[${a}]`;
+    function add() {
+      var as = document.getElementById("number").value;
+      // console.log(as);
+      // console.log(a.length);
+
+      // if (a.length == 0) {
+      //   a.push(document.getElementById("number").value);
+      //   a.push(document.getElementById("number").value);
+      //   // a = [document.getElementById("number").value];
+      //   // a = [document.getElementById("number").value];
+      //   console.log(document.getElementById("number").value);
+
+      //   console.log("asicohasoichois");
+      //   // a.push(document.getElementById("number").value);
+      // } else {
+      //   document.getElementById("h1").innerHTML = a;
+      // }
+
+      a.push(document.getElementById("number").value);
+      document.getElementById("h2").innerHTML = `[${a}]`;
+    }
+    // document.getElementById("h1").innerHTML = a;
+    const change = () => {
+      // document.getElementById("h1").innerHTML = `[${a}]`;
+
+      let profit;
+
+      for (let i = 0; i < a.length; i++) {
+        for (let j = i; j < a.length; j++) {
+          if (!profit) {
+            if (a[i] < a[j]) {
+              profit = a[j] - a[i];
+              console.log(profit);
+            }
+          } else {
+            if (profit < a[j] - a[i]) {
+              profit = a[j] - a[i];
+              console.log(profit);
+            }
+          }
+
+          // console.log(a[i]);
+        }
+        // console.log("a[i]");
+      }
+      if (profit > 0) {
+        document.getElementById("h1").innerHTML = profit;
+        // document.getElementById("h2").innerHTML = a;
+      } else {
+        console.log(a);
+        console.log(typeof a);
+        document.getElementById("h1").innerHTML = "0";
+      }
+    };
+    // console.log("a");
+    // // console.log(e.target.value);
+    // a = document.getElementById("nu").value;
+    // console.log(typeof a);
+    // var b = a.split("");
+    // console.log(b);
+    // // var c = b.reverse();
+    // var c = "";
+    // for (let index = a.length - 1; index >= 0; index--) {
+    //   c = c.concat(a[index]);
+    //   // console.log(c);
+    // }
+    // d = c.replace("undefinede", "");
+    // console.log(d);
+    // document.getElementById("h1").innerHTML = a;
+    // };
+
+    // var a = promptp(parseInt("enter a number="));
+    // confirm(typeof a);
+
+    //     JavaScript will "convert" numeric string to integer, if you perform calculations on it (as JS is weakly typed). But you can convert it yourself using parseInt or parseFloat.
+
+    // Just remember to put radix in parseInt!
+
+    // // In case of integer inputs:
+
+    // var x = parseInt(prompt("Enter a Value", "0"), 10);
+    // var y = parseInt(prompt("Enter a Value", "0"), 10);
+    // document.getElementsByClassName("h1").inerhtml += "a";
+    // document.getElementById("h1").innerHTML = "I have changed!";
+    // document.getElementById("h1").innerHTML = "I have changed!";
+
+    // In case of float:
+
+    // var x = parseFloat(prompt("Enter a Value", "0"));
+    // var y = parseFloat(prompt("Enter a Value", "0"));
+    // if (typeof a == "number") {
+    // } else {
+    //   confirm("enter a number only");
+    //   document.location.reload();
+    // }
+    document.getElementById("h1").innerHTML = document.location.hostname;
+    console.log(document.location.hostname);
+  </script>
+</html>
+-->
